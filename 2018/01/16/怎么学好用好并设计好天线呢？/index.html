@@ -2,10 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
   <title>怎么学好用好并设计好天线呢？ | 天线之家</title>
+  <meta name="description" content="A geeker blog." />
+  <meta name="keywords" content="hexo,theme,icer,ggice" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这是我在知乎做的一个回答，大家将就看吧 工程上天线是怎么设计出来的一般来讲一个完整的天线设计过程会包括下面几个步骤：1、天线需求分析及分解在这个阶段你应该知道天线是在什么场景下使用的？在这种场景下客户要求的天线指标有哪些？客户提出的指标要求是否都合理，是否可实现？你可以适当牺牲哪些指标？哪些指标必须要保证？如果有不同客户提出不同的设计诉求，你有没有办法提取最关键的共同需求，实现归一化设计以降低设计">
 <meta property="og:type" content="article">
@@ -18,78 +21,142 @@
 <meta name="twitter:title" content="怎么学好用好并设计好天线呢？">
 <meta name="twitter:description" content="这是我在知乎做的一个回答，大家将就看吧 工程上天线是怎么设计出来的一般来讲一个完整的天线设计过程会包括下面几个步骤：1、天线需求分析及分解在这个阶段你应该知道天线是在什么场景下使用的？在这种场景下客户要求的天线指标有哪些？客户提出的指标要求是否都合理，是否可实现？你可以适当牺牲哪些指标？哪些指标必须要保证？如果有不同客户提出不同的设计诉求，你有没有办法提取最关键的共同需求，实现归一化设计以降低设计">
   
-    <link rel="alternate" href="/atom.xml" title="天线之家" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+  <link rel='stylesheet' href='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.css'/>
+  <link rel="stylesheet" href="//cdnjs.xyz/libs/highlight/9.12.0/styles/github-gist.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_2mmfrz9pgd7h9f6r.css">
+  <script src='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.js'></script>
+  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
+  <link rel="stylesheet" href="/style.css">
   
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  ga('create', 'UA-93986029-1', 'auto');
+  ga('send', 'pageview');
   
-  <link rel="stylesheet" href="/css/style.css">
+</script>
+<!-- End Google Analytics -->
+
+
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">天线之家</a>
-      </h1>
+  
+  <script>NProgress.start();</script>
+  
+  <div id="site-wrapper">
+    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/">
+      <img src="/image/logo.jpg" class="logo"/>
+      <!-- <span class="site-desc">
+        
+      </span> -->
+    </a>
+    <div class="social-wrapper">
       
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">无线联通世界的大门在我这里开启，我是模拟世界和数字世界的边界</a>
-        </h2>
+        
+          <a href="https://twitter.com/iggice" class="social twitter" target="_blank" rel="external">
+            <span class="iconfont icon-twitter"></span>
+          </a>
+          
+          <a href="https://github.com/ggice" class="social github" target="_blank" rel="external">
+            <span class="iconfont icon-github"></span>
+          </a>
+          
+          <a href="http://ggice.tumblr.com/" class="social tumblr" target="_blank" rel="external">
+            <span class="iconfont icon-tumblr"></span>
+          </a>
+          
+          <a href="https://dribbble.com/ggice" class="social dribbble" target="_blank" rel="external">
+            <span class="iconfont icon-dribbble"></span>
+          </a>
+          
+          <a href="mailto:i@ice.gs" class="social email" target="_blank" rel="external">
+            <span class="iconfont icon-email"></span>
+          </a>
+          
+          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+            <span class="iconfont icon-rss"></span>
+          </a>
+          
       
+      
+      <a href="#" class="social search-do" target="_blank" rel="external">
+        <span class="iconfont icon-search"></span>
+      </a>
+            
+      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://antenna.rocks/index.html"></form> -->
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://antenna.rocks/index.html"></form>
+    <div class="search-wrap">
+      <div class="search-content animated fade-in">
+        <p class="search-input">
+          <span class="iconfont icon-search"></span>
+          <input tabindex="1">
+        </p>
+        <ul class="search-result">
+            
+        </ul>
       </div>
     </div>
+    <nav class="header-nav">
+      
+        <a href="/" class="archives">
+          home
+        </a>
+        
+        <a href="/tags/web-development/" class="archives">
+          web development
+        </a>
+        
+        <a href="/tags/soft/" class="archives">
+          soft
+        </a>
+        
+        <a href="/tags/os/" class="archives">
+          os
+        </a>
+        
+        <a href="/archives" class="archives">
+          archives
+        </a>
+        
+        <a href="/about/" class="archives">
+          About
+        </a>
+        
+    </nav>
   </div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-怎么学好用好并设计好天线呢？" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/16/怎么学好用好并设计好天线呢？/" class="article-date">
-  <time datetime="2018-01-16T21:36:51.000Z" itemprop="datePublished">2018-01-16</time>
-</a>
+    <script>NProgress.set(0.4);</script>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      怎么学好用好并设计好天线呢？
-    </h1>
-  
-
-      </header>
-    
+    <main id="main" role="main">
+      <article id="post-怎么学好用好并设计好天线呢？"
+  class="post article white-box article-type-post animated fade-in-top"
+  itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/2018/01/16/怎么学好用好并设计好天线呢？/">
+          怎么学好用好并设计好天线呢？
+        </a>
+      </h2>
+      <div class="subtitle">
+          <time>
+            Jan 16, 2018
+          </time>
+          
+      </div>
+  </section>
+  <section class="content">
     <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><a href="https://www.zhihu.com/question/20777807/answer/144484542" title="原文" target="_blank" rel="noopener">这是我在知乎做的一个回答，大家将就看吧</a></strong></p>
+      <p><strong><a href="https://www.zhihu.com/question/20777807/answer/144484542" title="原文" target="_blank" rel="noopener">这是我在知乎做的一个回答，大家将就看吧</a></strong></p>
 <h3 id="工程上天线是怎么设计出来的"><a href="#工程上天线是怎么设计出来的" class="headerlink" title="工程上天线是怎么设计出来的"></a>工程上天线是怎么设计出来的</h3><p>一般来讲一个完整的天线设计过程会包括下面几个步骤：<br>1、天线需求分析及分解<br>在这个阶段你应该知道天线是在什么场景下使用的？在这种场景下客户要求的天线指标有哪些？客户提出的指标要求是否都合理，是否可实现？你可以适当牺牲哪些指标？哪些指标必须要保证？如果有不同客户提出不同的设计诉求，你有没有办法提取最关键的共同需求，实现归一化设计以降低设计成本？总之在这一个阶段你要做到你真的明白客户需要一个什么样的天线。</p>
 <p>2、天线解决方案分析<br>等你理解清楚客户的需求以后，是时候提出具体的解决措施了。太阳底下没有新鲜事，这句话在天线设计领域也是成立的。天线的使用场景一定，你可选的天线方案一般也就定下来了。比如说：你要做低剖面的，那一般都会选择贴片类型的天线；你要做基站天线，那一般都会选择偶极子；你如果做测试馈源，那一般都会选择喇叭天线；你如果要做小型化，那你可能就会想到介质谐振天线。但这并不意味着万事大吉了。因为具体到某一个类型的天线，你要控制住天线的S参数带宽及方向图带宽都要求你对具体的天线形状做细致的设计和优化。在这一步中最能体现一个天线工程师的理论及仿真水平。一般来讲在这一步中会提出多种备选的方案，毕竟没有人会把所有的鸡蛋放在一个篮子里面。经过这一步，一般一个虚拟的但是完整的天线模型就产生了。</p>
 <p>3、天线样机制作<br>在第二部的基础上，一般都会投版打样。在这一步你需要充分关注DFX：天线机械装配是否满足要求？能否做进一步的设计改进使得装配更加容易？是否已经做了防呆设计？天线的实际馈电设计是否和设想一样？能否进一步降低线路损耗？防雷设计是否到位？焊点可靠性设计是否OK等等。</p>
@@ -101,103 +168,59 @@
 <p>再次你得知道结构设计及生产制造相关的知识。例如知道基本的绘图方法（现在才想起原来《工程制图》这么重要，以前在学校的时候我想我一个学电的学这为what？），什么样的造型设计有利于减小风载？什么样的结构形式能够增加强度？在现有的设计场景下应该优先使用什么样的材料来做天线？因为这些因素最终都会影响你设计的天线，你只有懂这些才能和其他领域的工程师愉快的合作。</p>
 <p>最后你得明白作为硬件工程师最好的自学方式就是找机会参加实际的生产实践。你得学会撸起袖子加油干，做一款能够工作的天线出来。我的体会是：我在公司一个月学会的东西比我在学校一年的都多～</p>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://antenna.rocks/index.html/2018/01/16/怎么学好用好并设计好天线呢？/" data-id="cjci5zc3v000324d23c9eoi01" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2018/01/16/在天线的世界里都有些什么呢？/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">在天线的世界里都有些什么呢？</div>
-    </a>
-  
-</nav>
+  </section>
 
+  
   
 </article>
-
-</section>
+      <script>NProgress.set(0.6);</script>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-link">
+      
+      <h3>LINKS</h3>
+      <p>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+          <a href="http://1x0.xyz/" target="_blank">Tian1x0</a>
+        
+          <a href="http://www.royalmice.com/hankzhou/" target="_blank">Hankzhou</a>
+        
+          <a href="http://sjydh.me/" target="_blank">设计有点货</a>
+        
+          <a href="https://developers.google.com/web/fundamentals/" target="_blank">Web fundamentals</a>
+        
+      </p>
+      
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/01/16/怎么学好用好并设计好天线呢？/">怎么学好用好并设计好天线呢？</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/16/在天线的世界里都有些什么呢？/">在天线的世界里都有些什么呢？</a>
-          </li>
-        
-      </ul>
+    <div class="footer-tags">
+      
     </div>
-  </div>
-
-  
-</aside>
-        
+    <div class="footer-info">
+        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <div>Copyright &copy; 2018, <a href="/">天线之家</a>  . All rights reserved .</div>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 dorji<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
   </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+
+    <script>NProgress.set(0.8);</script>
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
   </div>
+
+  <script src="//cdnjs.xyz/libs/highlight/9.12.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/main.js"></script>
+
+<!-- Commit -->
+
+
+
+  <script>
+    NProgress.done();
+  </script>
+  
 </body>
 </html>
