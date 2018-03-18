@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Antenna, antenna, antenna array, radiation, 电磁场, 天线, 天线阵列, 雷达" />
+  <meta name="keywords" content="Ansys,HFSS,HPC,ansoftrsmservice,cluster,集群， 高性能计算," />
 
 
 
@@ -75,13 +75,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="天线理论与设计学习笔记">
-<meta property="og:url" content="http://antenna.rocks/index.html">
+<meta name="description" content="Ansys HFSS在配置集群的时候需要注意以下几个问题：1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配">
+<meta name="keywords" content="Ansys,HFSS,HPC,ansoftrsmservice,cluster,集群， 高性能计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ansys Electronics HFSS HPC设置中需要注意的几个小问题">
+<meta property="og:url" content="http://antenna.rocks/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/index.html">
 <meta property="og:site_name" content="天线理论与设计学习笔记">
+<meta property="og:description" content="Ansys HFSS在配置集群的时候需要注意以下几个问题：1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-18T20:25:25.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天线理论与设计学习笔记">
+<meta name="twitter:title" content="Ansys Electronics HFSS HPC设置中需要注意的几个小问题">
+<meta name="twitter:description" content="Ansys HFSS在配置集群的时候需要注意以下几个问题：1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配">
 
 
 
@@ -111,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://antenna.rocks/"/>
+  <link rel="canonical" href="http://antenna.rocks/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/"/>
 
 
 
 
 
-  <title>天线理论与设计学习笔记 - 因为天线才有无线(限)精彩的世界！</title>
+  <title>Ansys Electronics HFSS HPC设置中需要注意的几个小问题 | 天线理论与设计学习笔记</title>
   
 
 
@@ -136,8 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -220,9 +224,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -252,9 +256,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/" itemprop="url">Ansys Electronics HFSS HPC设置中需要注意的几个小问题</a></h2>
+          <h2 class="post-title" itemprop="name headline">Ansys Electronics HFSS HPC设置中需要注意的几个小问题</h2>
         
 
         <div class="post-meta">
@@ -266,7 +268,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-18T21:05:57+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-18T14:05:57+01:00">
                 2018-03-18
               </time>
             
@@ -315,12 +317,8 @@
       
 
       
-        
-          
-            <p>Ansys HFSS在配置集群的时候需要注意以下几个问题：<br>1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied<br>2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配置<br>3、在启动ansoftrsmservice服务以后，要在Ansys的安装目录下使用RegisterEnginesWithRSM.pl add来添加配置信息到ansoftrsmservice.cfg中<br>4、Linux主节点上放置模型的目录要保证也能同时被客户端访问<br>5、注意集群服务器重新启动以后要检查集群的文件系统是否都挂载成功</p>
+        <p>Ansys HFSS在配置集群的时候需要注意以下几个问题：<br>1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied<br>2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配置<br>3、在启动ansoftrsmservice服务以后，要在Ansys的安装目录下使用RegisterEnginesWithRSM.pl add来添加配置信息到ansoftrsmservice.cfg中<br>4、Linux主节点上放置模型的目录要保证也能同时被客户端访问<br>5、注意集群服务器重新启动以后要检查集群的文件系统是否都挂载成功</p>
 
-          
-        
       
     </div>
     
@@ -332,17 +330,67 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    dingjiu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://antenna.rocks/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/" title="Ansys Electronics HFSS HPC设置中需要注意的几个小问题">http://antenna.rocks/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Ansys/" rel="tag"># Ansys</a>
+          
+            <a href="/tags/HFSS/" rel="tag"># HFSS</a>
+          
+            <a href="/tags/HPC/" rel="tag"># HPC</a>
+          
+            <a href="/tags/ansoftrsmservice/" rel="tag"># ansoftrsmservice</a>
+          
+            <a href="/tags/cluster/" rel="tag"># cluster</a>
+          
+            <a href="/tags/集群，-高性能计算/" rel="tag"># 集群， 高性能计算</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/16/怎么学好用好并设计好天线呢？/" rel="next" title="怎么学好用好并设计好天线呢？">
+                <i class="fa fa-chevron-left"></i> 怎么学好用好并设计好天线呢？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -352,14 +400,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -367,6 +412,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -584,6 +643,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -601,6 +664,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://antenna.rocks/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/';
+          this.page.identifier = '2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/';
+          this.page.title = 'Ansys Electronics HFSS HPC设置中需要注意的几个小问题';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -664,26 +739,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
