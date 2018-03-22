@@ -363,7 +363,7 @@
         
           
             <p>由于HFSS的版权特别的昂贵，软件的价格基本上是硬件价格的10倍以上，所以应该尽可能的最大化硬件的使用率。实验室近期在华为<a href="http://e.huawei.com/cn/products/cloud-computing-dc/servers/e-series/e9000-server-chassis" target="_blank" rel="noopener">E9000</a>服务器的基础上利用<a href="http://pbspro.org/" target="_blank" rel="noopener">PBS Pro</a>做调度器，用<a href="https://www.beegfs.io/content/" target="_blank" rel="noopener">BeeGFS</a>做文件管理系统，用<a href="https://www.ansys.com/products/electronics/ansys-hfss" target="_blank" rel="noopener">Ansys HFSS</a>自带的HPC组件创建了一套小型的HPC系统专门用于天线相关的仿真。</p>
-<p>整个机器由七个刀片服务器组成，所有的刀片服务器之间通过56G高速IB网络链接。其中有一个配置最低的结点使用Windows Server做多用户接入节点，配置Nvidia K40，16核心CPU，128G内存用于模型的编辑及数据前后处理，其余的六个刀片都由512G内存，1T硬盘，32核Xeon CPU组成，其中四个安装CentOS 7.3系统，通过PBS Pro配置成一个小型的集群，另外两个配置成Windows Server版本，通过HFSS Distribute功能专门看分配给多个用户使用,以支持小型项目的仿真。</p>
+<p>整个机器由七个刀片服务器组成，所有的刀片服务器之间通过56G高速IB网络链接。其中有一个配置最低的结点使用Windows Server做多用户接入节点，配置Nvidia K40，16核心CPU，128G内存用于模型的编辑及数据前后处理，其余的六个刀片都由512G内存，1T硬盘，32核Xeon CPU组成，其中四个安装<a href="https://www.centos.org/download/" target="_blank" rel="noopener">CentOS 7.3</a>系统，通过PBS Pro配置成一个小型的集群，另外两个配置成Windows Server版本，通过HFSS Distribute功能专门看分配给多个用户使用,以支持小型项目的仿真。</p>
 <p>BeeGFS文件系统配置在Linux集群上，一共由20块1T的硬盘组成，并通过<a href="https://zh.wikipedia.org/wiki/Samba" target="_blank" rel="noopener">Samba</a>挂载到Windows上，作为所有用户的工作目录。通过使用BeeGFS系统可以改善硬盘的负载，提高硬盘的使用寿命，并配合RAID的设置形成数据备份机制，保证重要的模型及仿真数据不发生丢失。</p>
 <p>总的来讲，整套系统中涉及模型的建立，编辑以及数据的前后处理都在windows Server系统中完成，大型项目的仿真全部提交到小型集群系统中完成，小型项目的仿真全部通过分布式计算完成。</p>
 <p>备注:在使用过程中发现由于涉及不同操作系统，以及不同软件组件之间的通信，提交作业的过程会稍微显得有延迟。</p>
