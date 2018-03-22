@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://antenna.rocks/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/">
+    <link itemprop="mainEntityOfPage" href="http://antenna.rocks/2018/03/22/一个天线仿真的超算系统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dingjiu">
@@ -288,7 +288,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/18/Ansys-Electronics-HFSS-HPC设置中需要注意的几个小问题/" itemprop="url">Ansys Electronics HFSS HPC设置中需要注意的几个小问题</a></h2>
+                <a class="post-title-link" href="/2018/03/22/一个天线仿真的超算系统/" itemprop="url">一个用于天线仿真的小型超算系统</a></h2>
         
 
         <div class="post-meta">
@@ -300,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-18T21:05:57+08:00">
-                2018-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T19:58:39+08:00">
+                2018-03-22
               </time>
             
 
@@ -310,6 +310,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记，超算/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记，超算</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -340,7 +362,11 @@
       
         
           
-            <p>Ansys HFSS在配置集群的时候需要注意以下几个问题：<br>1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied<br>2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配置<br>3、在启动ansoftrsmservice服务以后，要在Ansys的安装目录下使用RegisterEnginesWithRSM.pl add来添加配置信息到ansoftrsmservice.cfg中<br>4、Linux主节点上放置模型的目录要保证也能同时被客户端访问<br>5、注意集群服务器重新启动以后要检查集群的文件系统是否都挂载成功</p>
+            <p>由于HFSS的版权特别的昂贵，软件的价格基本上是硬件价格的10倍以上，所以应该尽可能的最大化硬件的使用率。实验室近期在华为E9000服务器的基础上利用PBS Pro做调度器，用BeeGFS做文件管理系统，用Ansys HFSS自带的HPC组件创建了一套小型的HPC系统专门用于涉及天线的电磁场仿真。</p>
+<p>整个机器由七个刀片服务器组成，所有的刀片服务器之间通过56G高速IB网络链接。其中有一个配置最低的结点使用Windows Server做多用户接入节点，配置Nvidia K40，16核心CPU，128G内存用于模型的编辑及数据前后处理，其余的六个刀片都由512G内存，1T硬盘，32核Xeon CPU组成，其中四个安装CentOS 7.3系统，通过PBS Pro配置成一个小型的集群，另外两个配置成Windows Server版本，通过HFSS Distribute功能专门看分配给多个用户使用,以支持小型项目的仿真。</p>
+<p>BeeGFS文件系统配置在Linux集群上，一共由20块1T的硬盘组成，并通过Samba挂载到Windows上，作为所有用户的工作目录。通过使用BeeGFS系统可以改善硬盘的负载，提高硬盘的使用寿命，并配合RAID的设置形成数据备份机制，保证重要的模型及仿真数据不发生丢失。</p>
+<p>总的来讲，整套系统中涉及模型的建立，编辑以及数据的前后处理都在windows Server系统中完成，大型项目的仿真全部提交到小型集群系统中完成，小型项目的仿真全部通过分布式计算完成。</p>
+<p>备注:在使用过程中发现由于涉及不同操作系统，以及不同软件组件之间的通信，提交作业的过程会稍微显得有延迟。</p>
 
           
         
@@ -380,7 +406,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -426,12 +452,21 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
             
 
             
@@ -439,7 +474,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
