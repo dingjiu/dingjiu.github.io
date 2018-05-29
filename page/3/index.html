@@ -340,7 +340,7 @@
       
         
           
-            <p>Ansys HFSS在配置集群的时候需要注意以下几个问题：<br>1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示Permission Denied<br>2、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配置<br>3、在启动ansoftrsmservice服务以后，要在Ansys的安装目录下使用RegisterEnginesWithRSM.pl add来添加配置信息到ansoftrsmservice.cfg中<br>4、Linux主节点上放置模型的目录要保证也能同时被客户端访问<br>5、注意集群服务器重新启动以后要检查集群的文件系统是否都挂载成功</p>
+            <p>Ansys HFSS在配置集群的时候需要注意以下几个问题：<br>1、运行于控制节点的ansoftrsmservice需要以非root用户运行，否则远程客户端使用默认的工具提交作业的时候会提示qsub命令权限不够，Permission Denied<br>2、需要注意各个用户对应的目录权限设置是否正确，另外针对每个用户是否在各节点是否有相同的权限<br>3、主节点上在运行ansoftrsmservioce程序之前要对ansoftrsmservice.cfg进行相关配置，这时一定要按照操作说明针对集群资源调度器的名称和路径给予正确的配置<br>4、在启动ansoftrsmservice服务以后，要在Ansys的安装目录下使用RegisterEnginesWithRSM.pl add来添加配置信息到ansoftrsmservice.cfg中<br>5、Linux主节点上放置模型的目录要保证也能同时被客户端访问<br>6、注意集群服务器重新启动以后要检查集群的文件系统是否都挂载成功</p>
 
           
         
